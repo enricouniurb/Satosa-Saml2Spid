@@ -1,0 +1,44 @@
+version: '3.4'
+    
+services:
+  proxy:
+    build:
+      args:
+        SP_METADATA_URL: http://host.docker.internal/saml2/metadata
+        IDP_METADATA_URL: http://host.docker.internal:8080/metadata.xml
+        #IDP_METADATA_URL: http://host.docker.internal:8088/metadata
+      context: ./
+      dockerfile: ./Dockerfile
+    image: satosa_proxy 
+    container_name: saml2spid
+    ports:
+      - 10000:10000
+      - 9999:9999
+    working_dir: /satosa_proxy
+    volumes:
+      - ./example:/satosa_proxy/example
+     # - ./satosa:/usr/lib/python3.8/site-packages/satosa
+    command:
+      bash -c "./demo-run.sh"
+    networks:
+      - app-network
+
+  spidtest:
+    build:
+      context: ../spid-testenv2
+      dockerfile: ./Dockerfile
+    ports:
+      - 8088:8088
+    volumes:
+      - ../spid-testenv2/conf:/app/conf
+    working_dir: /app
+    command:
+      bash -c "python ./spid-testenv.py"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+    

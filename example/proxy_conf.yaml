@@ -7,14 +7,14 @@ CONTEXT_STATE_DELETE: yes
 # TODO: PR to add this in config!
 #STATE_COOKIE_MAX_AGE = 1200
 
-STATE_ENCRYPTION_KEY: "CHANGE_ME!"
+STATE_ENCRYPTION_KEY: "ad123ad"
 
 cookies_samesite_compat:
   - ["SATOSA_STATE", "SATOSA_STATE_LEGACY"]
 
 # The proxy can hash any attribute value (e.g., for obfuscation) before passing it on to the client
 # DEPRECATED, use hasher microservice instead
-USER_ID_HASH_SALT: "CHANGE_ME!"
+#USER_ID_HASH_SALT: "CHANGE_ME!"
 
 UNKNOW_ERROR_REDIRECT_PAGE: "http://localhost:9999/error_page.html"
 
@@ -24,7 +24,7 @@ CUSTOM_PLUGIN_MODULE_PATHS:
   - "plugins/frontends"
   - "plugins/micro_services"
 BACKEND_MODULES:
-  - "plugins/backends/saml2_backend.yaml"
+ # - "plugins/backends/saml2_backend.yaml"
   - "plugins/backends/spidsaml2_backend.yaml"
 FRONTEND_MODULES:
   - "plugins/frontends/saml2_frontend.yaml"
@@ -43,7 +43,7 @@ LOGGING:
   handlers:
     console:
       class: logging.StreamHandler
-      level: INFO
+      level: DEBUG
       formatter: simple
       stream: ext://sys.stdout
     debug_file:
@@ -56,12 +56,12 @@ LOGGING:
       encoding: utf8
   loggers:
     satosa:
-      level: INFO
+      level: DEBUG
       formatter: simple
       handlers: [console]
       propagate: no
     saml2:
-      level: ERROR
+      level: DEBUG
       formatter: simple
       handlers: [console]
       propagate: no
@@ -75,6 +75,6 @@ LOGGING:
       formatter: simple
       handlers: [debug_file]
       propagate: no
-  # root:
-    # level: INFO
-    # handlers: [info_file_handler]
+  root:
+    level: DEBUG
+    handlers: [debug_file]
