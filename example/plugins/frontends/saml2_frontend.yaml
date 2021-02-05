@@ -86,8 +86,6 @@ config:
             encrypt_assertion: false
             encrypted_advice_attributes: false
 
-            entityId: 
-
   # acr_mapping:
     # "": default-LoA
     # "https://accounts.google.com": LoA1
@@ -96,6 +94,7 @@ config:
     single_sign_on_service:
       #'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST': sso/post
       'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect': sso/post
+    
 
   # If configured and not false or empty the common domain cookie _saml_idp will be set
   # with or have appended the IdP used for authentication. The default is not to set the

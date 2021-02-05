@@ -16,7 +16,7 @@ services:
       - 9999:9999
     working_dir: /satosa_proxy
     volumes:
-      - ./example:/satosa_proxy/example
+      - ./example/static:/satosa_proxy/static
      # - ./satosa:/usr/lib/python3.8/site-packages/satosa
     command:
       bash -c "./demo-run.sh"
