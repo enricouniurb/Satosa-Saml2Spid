@@ -14,10 +14,19 @@ services:
     ports:
       - 10000:10000
       - 9999:9999
+      - 4444:4444
     working_dir: /satosa_proxy
+    #COPY example/ $BASEDIR/
     volumes:
       - ./example/static:/satosa_proxy/static
+      - ./example/attributes-map:/satosa_proxy/attributes-map
+      - ./example/backends:/satosa_proxy/backends
+      - ./example/plugins:/satosa_proxy/plugins
+      - ./example/plugins/internal_attributes.xml:/satosa_proxy/plugins/internal_attributes.xml
+      - ./example/plugins/proxy_conf.xml:/satosa_proxy/plugins/proxy_conf.xml
      # - ./satosa:/usr/lib/python3.8/site-packages/satosa
+    stdin_open: true
+    tty: true
     command:
       bash -c "./demo-run.sh"
     networks:

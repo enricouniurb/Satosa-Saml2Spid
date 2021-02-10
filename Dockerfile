@@ -6,8 +6,12 @@ RUN apk add libffi-dev libressl-dev python3 py3-pip python3-dev procps git opens
 RUN apk add build-base libressl libffi-dev libressl-dev libxslt-dev libxml2-dev xmlsec-dev xmlsec
 
 ENV BASEDIR='/satosa_proxy'
-COPY example/ $BASEDIR/
+
+WORKDIR $BASEDIR/
 COPY requirements.txt $BASEDIR/
+RUN pip3 install -r requirements.txt --ignore-installed
+RUN cd ..
+COPY example/ $BASEDIR/
 
 # demo certificates
 RUN mkdir $BASEDIR/pki/
@@ -29,7 +33,6 @@ RUN echo $(cd $BASEDIR/pki/ && ls -la)
 RUN $BASEDIR/pki/build_spid_certs.sh
 
 WORKDIR $BASEDIR/
-RUN pip3 install -r requirements.txt --ignore-installed
 
 # Metadata
 RUN mkdir -p metadata/idp
