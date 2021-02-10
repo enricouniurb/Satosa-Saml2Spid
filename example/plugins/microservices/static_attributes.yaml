@@ -3,8 +3,8 @@ name: AddAttributes
 config:
     static_attributes:
         # organization: testunical
-        schachomeorganization: testunical.it
+        schachomeorganization: testuniurb.it
         schachomeorganizationtype: ["urn:schac:homeOrganizationType:eu:higherEducationInstitution", "urn:schac:homeOrganizationType:eu:university"]
-        # organizationname: testunical
-        # countryname: IT
-        # friendlycountryname: Italy
+        organizationname: testuniurb
+        countryname: IT
+        friendlycountryname: Italy

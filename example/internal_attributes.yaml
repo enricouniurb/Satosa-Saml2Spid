@@ -98,6 +98,10 @@ attributes:
     saml: [mobilePhone]
   expirationDate:
     saml: [expirationDate]
+  
+  #statici
+  countryname:
+    saml: [countryName, countryname]
 # user identification mapping
 user_id_from_attrs: [spidcode, edupersontargetedid]
 user_id_to_attr: spidcode

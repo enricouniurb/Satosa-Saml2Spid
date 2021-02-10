@@ -34,6 +34,7 @@ MICRO_SERVICES:
   # - "plugins/microservices/ldap_attribute_store.yaml"
   # re-process again after new attributes beign pushed (or not) from ldap store
   # - "plugins/microservices/spid_unical_account_linking.yaml"
+  - "plugins/microservices/static_attributes.yaml"
   - "plugins/microservices/target_based_routing.yaml"
 LOGGING:
   version: 1
