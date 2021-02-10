@@ -1,6 +1,7 @@
 import logging
 import saml2
 import satosa.util as util
+import debugpy
 
 from saml2 import BINDING_HTTP_REDIRECT, BINDING_HTTP_POST
 from saml2.authn_context import requested_authn_context
@@ -18,7 +19,8 @@ from six import text_type
 from . spidsaml2_validator import Saml2ResponseValidator
 
 logger = logging.getLogger(__name__)
-
+debugpy.configure(python="/usr/bin/python3")
+debugpy.listen(('0.0.0.0', 4444))
 
 class SpidSAMLBackend(SAMLBackend):
     """
@@ -216,7 +218,7 @@ class SpidSAMLBackend(SAMLBackend):
         :return: response to the user agent
         """
         self.check_blacklist()
-
+      
         kwargs = {}
         # fetch additional kwargs
         kwargs.update(self.get_kwargs_sign_dig_algs())
