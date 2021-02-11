@@ -31,7 +31,7 @@ FRONTEND_MODULES:
 MICRO_SERVICES:
   # - "plugins/microservices/spid_unical_account_linking.yaml"
   # - "plugins/microservices/multiple_ldap_attribute_store.yaml"
-  # - "plugins/microservices/ldap_attribute_store.yaml"
+  - "plugins/microservices/ldap_attribute_store.yaml"
   # re-process again after new attributes beign pushed (or not) from ldap store
   # - "plugins/microservices/spid_unical_account_linking.yaml"
   - "plugins/microservices/static_attributes.yaml"

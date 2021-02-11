@@ -23,7 +23,6 @@ OPENOSI_OID = 'urn:oid:1.3.6.1.4.1.27630.2.1.1.'
 EIDAS_NATURALPERSON = 'http://eidas.europa.eu/attributes/naturalperson/'
 EIDAS_LEGALPERSON = 'http://eidas.europa.eu/attributes/legalperson/'
 
-
 _MAP = {
         # R&S federation and eIDAS
         EIDAS_LEGALPERSON+'LegalPersonIdentifier': 'LegalPersonIdentifier',
@@ -132,7 +131,7 @@ _MAP = {
         SIS+'1': 'sisLegalGuardianFor',
         SIS+'2': 'sisSchoolGrade',
         UCL_DIR_PILOT+'1': 'uid',
-        #UCL_DIR_PILOT+'3': 'mail',
+        UCL_DIR_PILOT+'3': 'email', #decommentato
         UCL_DIR_PILOT+'25': 'dc',
         UCL_DIR_PILOT+'37': 'associatedDomain',
         UCL_DIR_PILOT+'43': 'co',
@@ -146,7 +145,7 @@ _MAP = {
         X500ATTR_OID+'7': 'l',
         X500ATTR_OID+'8': 'st',
         X500ATTR_OID+'9': 'street',
-        X500ATTR_OID+'10': 'o',
+        X500ATTR_OID+'10': 'o', 
         X500ATTR_OID+'11': 'ou',
         X500ATTR_OID+'12': 'title',
         X500ATTR_OID+'14': 'searchGuide',
@@ -187,6 +186,10 @@ _MAP = {
         X500ATTR_OID+'53': 'deltaRevocationList',
         X500ATTR_OID+'54': 'dmdName',
         X500ATTR_OID+'65': 'pseudonym',
+        X500ATTR_OID+'100': 'realm',
+        'urn:oid:1.3.6.1.4.1.4203.666.11.11.1.0': 'codiceFiscale',
+        'urn:oid:1.3.6.1.4.1.27280.1.20': 'matricola',    
+        'urn:oid:1.3.6.1.4.1.27280.1.13': 'ruolo',
 
         # Spid related
         "spidCode": "spidCode",
@@ -203,7 +206,7 @@ _MAP = {
         "ivaCode": "ivaCode",
         "idCard": "idCard",
         "mobilePhone": "mobilePhone",
-        "email": "email",
+        #"email": "email",
         "address": "address",
         "expirationDate": "expirationDate",
         "digitalAddress": "digitalAddress",

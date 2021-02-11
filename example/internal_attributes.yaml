@@ -98,7 +98,13 @@ attributes:
     saml: [mobilePhone]
   expirationDate:
     saml: [expirationDate]
-  
+  codiceFiscale: 
+    saml: [codiceFiscale, codicefiscale]
+  realm: 
+    saml: [realm]
+  ruolo: 
+    saml: [ruolo]
+
   #statici
   countryname:
     saml: [countryName, countryname]

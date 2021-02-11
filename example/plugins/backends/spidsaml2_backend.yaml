@@ -93,6 +93,11 @@ config:
                               'fiscalNumber',
                               'email']
 
+        optional_attributes: ['displayname',
+                             'codiceFiscale',
+                             'realm',
+                             'ruolo']
+
         #optional_attributes: ['gender',
         #                      'companyName',
         #                      'registeredOffice',

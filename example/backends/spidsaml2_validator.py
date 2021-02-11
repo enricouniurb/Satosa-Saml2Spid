@@ -19,7 +19,7 @@ class Saml2ResponseValidator(object):
     def __init__(self, authn_response='', issuer='',
                  nameid_formats=['urn:oasis:names:tc:SAML:2.0:nameid-format:transient'],
                  recipient='spidSaml2/acs/post',
-                 accepted_time_diff=1,
+                 accepted_time_diff=60,
                  in_response_to='',
                  requester='',
                  authn_context_class_ref='https://www.spid.gov.it/SpidL2',

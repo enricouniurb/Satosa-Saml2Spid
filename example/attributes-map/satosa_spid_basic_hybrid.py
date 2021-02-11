@@ -172,8 +172,11 @@ ATTRS = ['facsimileTelephoneNumber',
          'sisSchoolGrade',
          'schacPersonalPosition',
          'st',
-         'certificateRevocationList'
-         'countryName']
+         'certificateRevocationList',
+         'countryName',
+         'codiceFiscale',
+         'matricola',
+         'ruolo']
 
 
 MAP = {
