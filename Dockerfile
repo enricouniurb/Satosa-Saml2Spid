@@ -20,6 +20,8 @@ COPY build_spid_certs.sh $BASEDIR/pki/
 WORKDIR $BASEDIR/pki/
 RUN chmod +x $BASEDIR/pki/build_spid_certs.sh
 
+COPY example/plugins/microservices/processors/legacy_processor.py /usr/lib/python3.8/site-packages/satosa/micro_services/processors
+
 ENV COMMON_NAME="SPID example proxy"
 ENV LOCALITY_NAME="Roma"
 ENV ORGANIZATION_IDENTIFIER="PA:IT-c_h501"

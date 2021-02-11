@@ -43,7 +43,7 @@ config:
         # - attribute_names: [eduPersonPrincipalName, name_id]
           # name_id_format: urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
         # - attribute_names: [eduPersonPrincipalName, edupersontargetedid]
-        - attribute_names: [surname]
+        - attribute_names: [codice_fiscale]
         #- attribute_names: [surname, edupersonprincipalname]
         #- attribute_names: [schacpersonaluniqueid]
         # - attribute_names: [name_id]
@@ -53,7 +53,7 @@ config:
           # add_scope: issuer_entityid
       #ldap_identifier_attribute: schacPersonalUniqueID
       #ldap_identifier_attribute: eduPersonPrincipalName
-      ldap_identifier_attribute: surname
+      ldap_identifier_attribute: codiceFiscale
 
 
       # Whether to clear values for attributes incoming

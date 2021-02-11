@@ -29,7 +29,7 @@ BACKEND_MODULES:
 FRONTEND_MODULES:
   - "plugins/frontends/saml2_frontend.yaml"
 MICRO_SERVICES:
-  # - "plugins/microservices/spid_unical_account_linking.yaml"
+  - "plugins/microservices/spid_account_linking.yaml"
   # - "plugins/microservices/multiple_ldap_attribute_store.yaml"
   - "plugins/microservices/ldap_attribute_store.yaml"
   # re-process again after new attributes beign pushed (or not) from ldap store

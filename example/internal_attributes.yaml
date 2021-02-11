@@ -99,7 +99,7 @@ attributes:
   expirationDate:
     saml: [expirationDate]
   codiceFiscale: 
-    saml: [codiceFiscale, codicefiscale]
+    saml: [codiceFiscale, codicefiscale, codice_fiscale]
   realm: 
     saml: [realm]
   ruolo: 
