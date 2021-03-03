@@ -1,3 +1,11 @@
+# Note fork
+
+Attivati nel file proxy_conf.yaml i seguenti micro services 
+*  spid_account_liniking: per la conversione del fiscal number nel codice fiscale (legacy)
+*  static_attributes: per l'aggiunta di attributi statici es. countryname
+*  ldap_attribute_store: per ricerca all'interno del ldap, in attribute_name indichiamo l'attributo legacy ottenuto dalla conversione del fiscal number e in ldap_identifier_attribute il nome dell'attributo nel nostro ldap
+*  aggiunti gli attributi necessari nel file satosa_spid_basic_hybrid e saosa_spdi_uri_hybrid
+
 # Satosa-Saml2Spid
 
 This is a SAML2  configuration for [SATOSA](https://github.com/IdentityPython/SATOSA)
